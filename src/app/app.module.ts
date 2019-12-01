@@ -6,6 +6,8 @@ import { TableComponent } from './table/table.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {MatPaginatorModule, MatTableModule} from '@angular/material';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import {MatPaginatorModule, MatTableModule} from '@angular/material';
       {path: 'table', component: TableComponent}
     ]),
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
